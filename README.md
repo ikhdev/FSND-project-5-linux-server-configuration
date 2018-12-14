@@ -171,21 +171,24 @@ Run ```sudo python database_setup.py```<br />
 
 ### Step 17 : Visit site at [Catalog App](http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com)
 
-
+## Oauth not work because the domain not https
+<br />
+<br />
+<br />
+<br />
 ## References : 
--[Udacity | FSND](https://www.udacity.com/)
--[Deploying a Python](https://www.phusionpassenger.com/library/walkthroughs/deploy/python/)
--[stackoverflow](https://stackoverflow.com)
--[ask Ubuntu](https://askubuntu.com/)
--[server setup]()
--[Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
--[mod_wsgi (Apache)](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)
--[mod_wsgi](https://modwsgi.readthedocs.io/en/develop/)
--[project 4 Item Catalog](https://github.com/ikhdev/FSND-Item-Catalog-project-5)
+-[Udacity | FSND](https://www.udacity.com/)<br />
+-[Deploying a Python](https://www.phusionpassenger.com/library/walkthroughs/deploy/python/)<br />
+-[stackoverflow](https://stackoverflow.com)<br />
+-[ask Ubuntu](https://askubuntu.com/)<br />
+-[Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)<br />
+-[mod_wsgi (Apache)](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)<br />
+-[mod_wsgi](https://modwsgi.readthedocs.io/en/develop/)<br />
+-[project 4 Item Catalog](https://github.com/ikhdev/FSND-Item-Catalog-project-5)<br />
 <br />
 <br />
 <br />
 
 ## SOME COMMANDS MAY HELP : 
 ```sudo tail -100 /var/log/apache2/error.log``` ----> To check if there any error with apatche 
-```python __init__.py runserver -d``` ----> debug mode
+```python <File_name>.py runserver -d``` ----> debug mode
