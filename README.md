@@ -97,6 +97,7 @@ logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0, "/var/www/catalog/")
 from catalog import app as application
 application.secret_key = 'super_secret_key'
+WTF_CSRF_ENABLED = True
 ```
 .<br />
 
@@ -170,9 +171,21 @@ Run ```sudo python database_setup.py```<br />
 
 ### Step 17 : Visit site at [Catalog App](http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com)
 
+
+## References : 
+-[Udacity | FSND](https://www.udacity.com/)
+-[Deploying a Python](https://www.phusionpassenger.com/library/walkthroughs/deploy/python/)
+-[stackoverflow](https://stackoverflow.com)
+-[ask Ubuntu](https://askubuntu.com/)
+-[server setup]()
+-[Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)
+-[mod_wsgi (Apache)](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)
+-[mod_wsgi](https://modwsgi.readthedocs.io/en/develop/)
+-[project 4 Item Catalog](https://github.com/ikhdev/FSND-Item-Catalog-project-5)
 <br />
 <br />
 <br />
 
 ## SOME COMMANDS MAY HELP : 
 ```sudo tail -100 /var/log/apache2/error.log``` ----> To check if there any error with apatche 
+```python __init__.py runserver -d``` ----> debug mode
