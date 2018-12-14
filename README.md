@@ -169,22 +169,34 @@ Run ```sudo python database_setup.py```<br />
 ### Step 16 : Restart Apache
 ```sudo service apache2 restart```<br />
 
-### Step 17 : Visit site at [Catalog App](http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com)
+[Udacity FSND](https://www.udacity.com/)<br />
+[Deploying a Python](https://www.phusionpassenger.com/library/walkthroughs/deploy/python/)<br />
+[stackoverflow](https://stackoverflow.com)<br />
+[ask Ubuntu](https://askubuntu.com/)<br />
+[Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)<br />
+[mod_wsgi (Apache)](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)<br />
+[mod_wsgi](https://modwsgi.readthedocs.io/en/develop/)<br />
+[project 4 Item Catalog](https://github.com/ikhdev/FSND-Item-Catalog-project-5)<br />
 
-## Oauth not work because the domain not https
+### Step 17 : Visit site at [Catalog App](http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com) <br />
+
+> Oauth not work because the domain not https
+
 <br />
 <br />
 <br />
-<br />
-## References : 
--[Udacity | FSND](https://www.udacity.com/)<br />
--[Deploying a Python](https://www.phusionpassenger.com/library/walkthroughs/deploy/python/)<br />
--[stackoverflow](https://stackoverflow.com)<br />
--[ask Ubuntu](https://askubuntu.com/)<br />
--[Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)<br />
--[mod_wsgi (Apache)](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)<br />
--[mod_wsgi](https://modwsgi.readthedocs.io/en/develop/)<br />
--[project 4 Item Catalog](https://github.com/ikhdev/FSND-Item-Catalog-project-5)<br />
+
+## References :
+
+[Udacity FSND](https://www.udacity.com/)<br />
+[Deploying a Python](https://www.phusionpassenger.com/library/walkthroughs/deploy/python/)<br />
+[stackoverflow](https://stackoverflow.com)<br />
+[ask Ubuntu](https://askubuntu.com/)<br />
+[Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)<br />
+[mod_wsgi (Apache)](http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/)<br />
+[mod_wsgi](https://modwsgi.readthedocs.io/en/develop/)<br />
+[project 4 Item Catalog](https://github.com/ikhdev/FSND-Item-Catalog-project-5)<br />
+
 <br />
 <br />
 <br />
