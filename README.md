@@ -12,7 +12,7 @@ Accessible SSH port: 2200
 
 Application URL: http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com
 
-Login with: ssh -i ~/.ssh/Udacity.pub -p 2200 grader@18.219.96.82
+Login with: ssh -i ~/.ssh/Udacity.pem -p 2200 grader@18.219.96.82
 
 ## Configuration Steps:
 ### Step 1 : Create new user named grader and give it the permission to sudo
