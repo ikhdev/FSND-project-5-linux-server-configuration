@@ -78,7 +78,8 @@ sys.path.insert(0, "/var/www/catalog/")
 from catalog import app as application
 application.secret_key = 'supersecretkey'
 ```
-<br />
+.<br />
+
 Rename application.py to init.py ```mv application.py __init__.py```<br />
 
 ### Step 11 : Install virtual environment
@@ -98,7 +99,8 @@ Change client_secrets.json path to ```/var/www/catalog/catalog/client_secrets.js
 
 ### Step 14 : Configure and enable a new virtual host
 Run ```sudo nano /etc/apache2/sites-available/catalog.conf```<br />
-Paste this code:
+Paste this code: <br />
+
 ```
 <VirtualHost *:80>
     ServerName 18.222.207.136
@@ -119,10 +121,13 @@ Paste this code:
     ErrorLog ${APACHE_LOG_DIR}/error.log
     LogLevel warn
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+</VirtualHost> 
 ```
-<br />
-Enable the virtual host ```sudo a2ensite catalog```<br />
+
+.<br />
+
+Enable the virtual host ``sudo a2ensite catalog``<br />
+
 ### Step 15 : Install and configure PostgreSQL
 ```sudo apt-get install libpq-dev python-dev```<br />
 ```sudo apt-get install postgresql postgresql-contrib```<br />
