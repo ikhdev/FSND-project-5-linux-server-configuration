@@ -6,13 +6,13 @@ Project 5 (Deploying to linux server)
 
 Configuring a Linux server to host a web app securely using flask application on to AWS Light Sail. Installation of a Linux distribution on a virtual machine and prepare it to host web application(Item Catalog). It includes installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.
 
-IP address: 
+IP address: 18.219.96.82
 
 Accessible SSH port: 2200
 
-Application URL: 
+Application URL: http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com
 
-Login with: ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@13.250.18.177
+Login with: ssh -i ~/.ssh/Udacity.pub -p 2200 grader@18.219.96.82
 
 ## Configuration Steps:
 ### Step 1 : Create new user named grader and give it the permission to sudo
@@ -33,7 +33,27 @@ Change the port from ```22 to 2200```<br />
 ```sudo ufw allow 2200/tcp```<br />
 ```sudo ufw allow 80/tcp```<br />
 ```sudo ufw allow 123/udp```<br />
+```sudo ufw allow ssh```<br />
+```sudo ufw allow www ```<br />
+```sudo ufw allow ftp```<br />
 ```sudo ufw enable```<br />
+
+### Extra :
+
+BACK TO DEFAULT SETTINGS (UFW) : ```sudo ufw reset``` <br />
+
+DISABLE UFW : ```sudo ufw disable```<br />
+
+```sudo nano /etc/ssh/sshd_config```<br />
+
+add these lines : <br /> <br />
+```
+ClientAliveInterval 25
+ClientAliveCountMax 0
+```
+.<br />
+
+```service ssh restart``` <br />
 
 ### Step 5 : Configure the local timezone to UTC
 Run ```sudo dpkg-reconfigure tzdata``` and then choose none of above then UTC<br />
@@ -59,7 +79,7 @@ Restart ```ssh with sudo service ssh restart```<br />
 
 ### Step 9 : Install mod_wsgi
 Run ```sudo apt-get install libapache2-mod-wsgi python-dev```<br />
-Enable ```mod_wsgi with sudo a2enmod wsgi```<br />
+Enable mod_wsgi with ```sudo a2enmod wsgi```<br />
 Start the web server with ```sudo service apache2 start```<br />
 
 ### Step 10 : Clone the Catalog app from Github
@@ -76,7 +96,7 @@ import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0, "/var/www/catalog/")
 from catalog import app as application
-application.secret_key = 'supersecretkey'
+application.secret_key = 'super_secret_key'
 ```
 .<br />
 
@@ -99,8 +119,9 @@ Install other project dependencies ```sudo pip2 install httplib2 oauth2client sq
 Change client_secrets.json path to ```/var/www/catalog/catalog/client_secrets.json```<br />
 
 ### Step 14 : Configure and enable a new virtual host
-Run ```sudo nano /etc/apache2/sites-available/catalog.conf```<br />
-Paste this code: <br />
+
+run ```sudo nano /etc/apache2/sites-enabled/000-default.conf``` <br />
+
 
 ```
 <VirtualHost *:80>
@@ -127,8 +148,6 @@ Paste this code: <br />
 
 .<br />
 
-Enable the virtual host ``sudo a2ensite catalog``<br />
-
 ### Step 15 : Install and configure PostgreSQL
 ```sudo apt-get install libpq-dev python-dev```<br />
 ```sudo apt-get install postgresql postgresql-contrib```<br />
@@ -149,4 +168,6 @@ Run ```sudo python database_setup.py```<br />
 ### Step 16 : Restart Apache
 ```sudo service apache2 restart```<br />
 
-### Step 17 : Visit site at [Catalog App](www)
+### Step 17 : Visit site at [Catalog App](http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com)
+
+
