@@ -53,7 +53,7 @@ ClientAliveCountMax 0
 ```
 .<br />
 
-```service ssh restart``` <br />
+```sudo service ssh restart``` <br />
 
 ### Step 5 : Configure the local timezone to UTC
 Run ```sudo dpkg-reconfigure tzdata``` and then choose none of above then UTC<br />
@@ -72,7 +72,7 @@ give the permissions : ```chmod 700 .ssh``` and ```chmod 644 .ssh/authorized_key
 ### Step 7 : Disable ssh login for root user
 Run ```sudo nano /etc/ssh/sshd_config```<br />
 Change ```PermitRootLogin without-password``` to ```PermitRootLogin no```<br />
-Restart ```ssh with sudo service ssh restart```<br />
+Restart ssh with ```sudo service ssh restart```<br />
 
 ### Step 8 : Install Apache
 ```sudo apt-get install apache2```<br />
@@ -170,4 +170,9 @@ Run ```sudo python database_setup.py```<br />
 
 ### Step 17 : Visit site at [Catalog App](http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com)
 
+<br />
+<br />
+<br />
 
+## SOME COMMANDS MAY HELP : 
+```sudo tail -100 /var/log/apache2/error.log``` ----> To check if there any error with apatche 
