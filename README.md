@@ -91,7 +91,8 @@ Change permissions ```sudo chmod -R 777 venv```<br />
 
 ### Step 12 : Install Flask and other dependencies
 Install Flask ```pip install Flask```<br />
-Install other project dependencies ```sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlalchemy_utils```<br />
+Install other project dependencies ```sudo pip2 install httplib2 oauth2client sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests sqlalchemy_utils```<br />
+
 
 ### Step 13 : Update path of client_secrets.json file
 ```nano __init__.py```<br />
