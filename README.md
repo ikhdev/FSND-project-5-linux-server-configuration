@@ -6,17 +6,14 @@ Project 5 (Deploying to linux server)
 
 Configuring a Linux server to host a web app securely using flask application on to AWS Light Sail. Installation of a Linux distribution on a virtual machine and prepare it to host web application(Item Catalog). It includes installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.
 
-IP address: 18.219.96.82
+IP address: 18.197.105.255
 
 Accessible SSH port: 2200
 
-Application URL: http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com
-
-Login with: ssh -i ~/.ssh/Udacity.pem -p 2200 grader@18.219.96.82
+Application URL: http://18.197.105.255
 
 ## Configuration Steps:
 ### Step 1 : Create new user named grader and give it the permission to sudo
-- SSH into the server through : ```ssh -i ~/.ssh/udacity_key.rsa unbuntu@13.250.18.177```<br />
 - Run ``` sudo adduser grader``` to create a new user named grader<br />
 - Create a new file in the sudoers directory with ```sudo nano /etc/sudoers.d/grader```<br />
 - Add the following line ```grader ALL=(ALL:ALL) ALL```<br />
@@ -87,7 +84,7 @@ Install git using ```sudo apt-get install git```<br />
 ```cd /var/www```<br />
 ```sudo mkdir catalog```<br />
 Change owner of the newly created catalog folder ```sudo chown -R grader:grader catalog```<br />
-```cd /catalog```<br />
+```cd catalog```<br />
 Clone your project from github ```git clone <LINK FOR PROJECT 4 REPOSETORY> catalog```<br />
 Create a catalog.wsgi file ```nano catalog.wsgi```, then add this inside:<br />
 ```
@@ -170,7 +167,7 @@ Run ```sudo python database_setup.py```<br />
 ```sudo service apache2 restart```<br />
 
 
-### Step 17 : Visit site at [Catalog App](http://ec2-18-219-96-82.us-east-2.compute.amazonaws.com) <br />
+### Step 17 : Visit site at [Catalog App](http://18.197.105.255) <br />
 
 > Oauth not work because the domain not https
 
@@ -194,5 +191,5 @@ Run ```sudo python database_setup.py```<br />
 <br />
 
 ## SOME COMMANDS MAY HELP : 
-```sudo tail -100 /var/log/apache2/error.log``` ----> To check if there any error with apatche 
+```sudo tail -100 /var/log/apache2/error.log``` ----> To check if there any error with apatche <br />
 ```python <File_name>.py runserver -d``` ----> debug mode
