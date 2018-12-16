@@ -123,9 +123,9 @@ run ```sudo nano /etc/apache2/sites-enabled/000-default.conf``` <br />
 
 ```
 <VirtualHost *:80>
-    ServerName 18.222.207.136
-    ServerAlias http://ec2-18-222-207-136.us-east-2.compute.amazonaws.com
-    ServerAdmin admin@18.222.207.136
+    ServerName 18.197.105.255
+    ServerAlias http://18.197.105.255
+    ServerAdmin admin@18.197.105.255
     WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
     WSGIProcessGroup catalog
     WSGIScriptAlias / /var/www/catalog/catalog.wsgi
