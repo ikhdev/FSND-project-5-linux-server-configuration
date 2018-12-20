@@ -4,13 +4,13 @@ Project 5 (Deploying to linux server)
 <br />
 
 
-Configuring a Linux server to host a web app securely using flask application on to AWS Light Sail. Installation of a Linux distribution on a virtual machine and prepare it to host web application(Item Catalog). It includes installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.
+Configuring a Linux server to host a web app securely using flask application on to Digitalocean. Installation of a Linux distribution on a virtual machine and prepare it to host web application(Item Catalog). It includes installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.
 
-IP address: 18.197.105.255
+IP address: 139.59.130.134
 
 Accessible SSH port: 2200
 
-Application URL: http://18.197.105.255
+Application URL: http://139.59.130.134
 
 ## Configuration Steps:
 ### Step 1 : Create new user named grader and give it the permission to sudo
@@ -25,6 +25,7 @@ Application URL: http://18.197.105.255
 ### Step 3 : Change SSH port from 22 to 2200
 - Run ```sudo nano /etc/ssh/sshd_config```<br />
 - Change the port from ```22 to 2200```<br />
+- ```sudo service ssh restart```<br />
 
 ### Step 4 : Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123)
 - ```sudo ufw allow 2200/tcp```<br />
@@ -34,23 +35,6 @@ Application URL: http://18.197.105.255
 - ```sudo ufw allow www ```<br />
 - ```sudo ufw allow ftp```<br />
 - ```sudo ufw enable```<br />
-
-### Extra :
-
-- BACK TO DEFAULT SETTINGS (UFW) : ```sudo ufw reset``` <br />
-
-- DISABLE UFW : ```sudo ufw disable```<br />
-
-- ```sudo nano /etc/ssh/sshd_config```<br />
-
-- add these lines : <br /> <br />
-```
-ClientAliveInterval 25
-ClientAliveCountMax 0
-```
-.<br />
-
-- ```sudo service ssh restart``` <br />
 
 ### Step 5 : Configure the local timezone to UTC
 - Run ```sudo dpkg-reconfigure tzdata``` and then choose none of above then UTC<br />
@@ -123,9 +107,9 @@ WTF_CSRF_ENABLED = True
 
 ```
 <VirtualHost *:80>
-    ServerName 18.197.105.255
-    ServerAlias http://18.197.105.255
-    ServerAdmin admin@18.197.105.255
+    ServerName 139.59.130.134
+    ServerAlias http://139.59.130.134
+    ServerAdmin admin@139.59.130.134
     WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
     WSGIProcessGroup catalog
     WSGIScriptAlias / /var/www/catalog/catalog.wsgi
@@ -167,9 +151,9 @@ WTF_CSRF_ENABLED = True
 - ```sudo service apache2 restart```<br />
 
 
-### Step 17 : Visit site at [Catalog App](http://18.197.105.255) <br />
+### Step 17 : Visit site at [Catalog App](http://139.59.130.134) <br />
 
-> Oauth not work because the domain not https
+> Oauth not work because the domain
 
 <br />
 <br />
