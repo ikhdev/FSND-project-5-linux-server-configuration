@@ -30,6 +30,7 @@ Application URL: http://139.59.130.134
 ### Step 4 : Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123)
 - ```sudo ufw allow 2200/tcp```<br />
 - ```sudo ufw deny 22```<br />
+- To delete port from status ```sudo ufw delete <DENY/ALLOW> <PORT NUMBER>```<br />
 - ```sudo ufw allow 80/tcp```<br />
 - ```sudo ufw allow 123/udp```<br />
 - ```sudo ufw allow ssh```<br />
